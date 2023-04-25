@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org">
+<head>
+<style>
+body {
+  align-items: center;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+form {
+  background-color: #15172b;
+  border-radius: 20px;
+  box-sizing: border-box;
+  height: 350px;
+  padding: 100px;
+  width: 500px;
+}
+h2{
+color:white;
+position:absolute;
+top:200px;
+left:620px;
+}
+#Name{
+color:white;
+}
+#name{
+position:absolute;
+left:580px;
+}
+#name{
+position:absolute;
+left:600px;
+}
+#Mobile{
+color:white;
+}
+#mobile{
+position:absolute;
+left:600px;
+}
+#Email{
+color:white;
+}
+#mail{
+position:absolute;
+left:600px;
+}
+#Password{
+color:white;
+}
+#password{
+position:absolute;
+left:600px;
+}
+#sub{
+position:absolute;
+left:650px;
+}
+</style>
+<title> Mall User Service</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<form  th:action="@{/login}" method="post" th:object="${user}">
+<h2> SIGN UP </h2>
+<label for="name"id="Name"> Name: </label>
+<input type="text"  id="name" name="name" th:field="*{name}" ><br><br>
+<label for="mobile"id="Mobile"> Mobile:</label>
+<input type="text" id="mobile" name=" mobile" th:field="*{mobile}" ><br> <br>
+<label for="email"id="Email"> Email: </label>
+<input type="email"  id="mail" name="mail" th:field="*{mail}"><br><br>
+<label for="password"id="Password"> Password: </label>
+<input type="password"  id="password" name="password" th:field="*{password}" ><br><br>
+<button type="submit" id="sub">Submit</button>
+</form> 
+</body>
+</html>

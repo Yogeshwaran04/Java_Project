@@ -1,0 +1,63 @@
+<html xmlns:th="http://www.thymleaf.org">
+<head>
+<title> Mall User Service</title>
+<style>
+body {
+  align-items: center;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+form {
+  background-color: #15172b;
+  border-radius: 20px;
+  box-sizing: border-box;
+  height: 300px;
+  padding: 100px;
+  width: 500px;
+}
+#mail{
+color:white;
+}
+#passwordid{
+position:absolute;
+left:600px;
+}
+#mailid{
+position:absolute;
+left:600px;
+}
+#password{
+color:white;
+}
+h2{
+position:absolute;
+top:200px;
+left:620px;
+color:white;
+}
+#login{
+position:absolute;
+left:650px;
+}
+a{
+position:absolute;
+left:620px;
+color:white;
+}
+</style>
+</head>
+<body>
+
+<form th:action="@{/dashboard}" method="post">
+<h2> LOG IN </h2>
+<label for="name" id="mail"> Mail: </label>
+<input type="text"  id="mailid" name="mail"><br><br>
+<label for="password" id="password"> Password: </label>
+<input type="password" id="passwordid" name="password"><br><br>
+<button type="submit" id="login">Log In</button><br><br>
+<a th:href="@{/signup}">Create an Account</a>
+</form>
+</body>
+</html>
